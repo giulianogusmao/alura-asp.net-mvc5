@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhe</title>
+</head>
+<body>
+    <div>
+        <p>ID: @ViewBag.Produto.Id</p>
+        <p>Nome: @ViewBag.Produto.Nome</p>
+        <p>Qtd: @ViewBag.Produto.Quantidade</p>
+        <p>Preço: @ViewBag.Produto.Preco</p>
+        <p>Descricao: @ViewBag.Produto.Descricao</p>
+
+        <br>
+        <p>Categoria: @ViewBag.Produto.Categoria.Nome</p>
+
+        @Html.ActionLink("Lista de produtos", "Index", "Produto");
+    </div>
+</body>
+</html>
