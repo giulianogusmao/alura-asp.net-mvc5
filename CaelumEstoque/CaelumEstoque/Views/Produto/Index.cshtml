@@ -22,11 +22,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var produto in Model)
+                @foreach (var produto in Model)
                 {
                     <tr>
                         <td>@produto.Id</td>
-                        <td>@Html.ActionLink(@produto.Nome, "Detalhe", new { id = produto.Id })</td>
+                        @*
+                            Exemplo com ActionLink ou RouteLink
+                            <td>@Html.ActionLink(@produto.Nome, "Detalhe", new { id = produto.Id })</td>*@
+                        <td>@Html.RouteLink(produto.Nome, "DetalheProduto", new { id = produto.Id })</td>
                         <td>@produto.Quantidade</td>
                     </tr>
                 }
